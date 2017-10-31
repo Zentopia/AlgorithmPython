@@ -16,14 +16,17 @@ node1.next = node2
 node2.next = node3
 node3.next = node4
 
-#链表反转
+#开始链表反转
 temp_node = head_node.next
 current_node = head_node
+
+#第一个节点反转后称为最后一个节点
 current_node.next = None
 
 while True:
     head_node = temp_node
     temp_node = head_node.next
+
     #反转
     head_node.next = current_node
 
@@ -31,7 +34,7 @@ while True:
         break
     current_node = head_node
 
-#打印链表
+#打印反转后的链表
 while head_node != None:
     print(head_node.data)
     head_node = head_node.next
