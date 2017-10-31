@@ -5,12 +5,13 @@ class Node:
         self.next = None
 
 # 链表反转
+# 1. 循环法
 def reverse(head_node):
 
     next_node = head_node.next
     prev_node = head_node
 
-    #第一个节点反转后称为最后一个节点
+    #第一个节点反转后成为最后一个节点
     prev_node.next = None
 
     while True:
@@ -26,6 +27,16 @@ def reverse(head_node):
 
     return head_node
 
+## 2. 递归法
+def recursive_reverse(reversed_node, new_node):
+    if new_node == None:
+        print(reversed_node)
+        return reversed_node
+
+    next_node = new_node.next
+    new_node.next = reversed_node
+    return recursive_reverse(new_node, next_node)
+
 if __name__ == '__main__':
 
     # 创建链表
@@ -40,7 +51,13 @@ if __name__ == '__main__':
     node2.next = node3
     node3.next = node4
 
-    head_node = reverse(head_node)
+    # 循环法
+    # head_node = reverse(head_node)
+
+    # 递归法
+    new_node = head_node.next
+    head_node.next = None
+    head_node = recursive_reverse(head_node, new_node)
 
     # 打印反转后的链表
     while head_node != None:
