@@ -64,11 +64,13 @@ if __name__ == '__main__':
         print(head_node.data)
         head_node = head_node.next
         
-    """
-    class Node:
-    def __init__(self,data):
-        self.data = data
-        self.next = None
+"""
+宝宝写的：
+
+class Node:
+def __init__(self,data):
+    self.data = data
+    self.next = None
 
 
 def recursive_reverse(reversed_node, next_node):
