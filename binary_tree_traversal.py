@@ -16,7 +16,7 @@ class Node:
   3     4     5    6
 """
 
-# 递归前序遍历 根-左-右 1 2 4 5 3 6 7
+# 递归前序遍历 根-左-右 0 1 3 4 2 5 6
 def recursive_preorder_traversal(root):
     if root != None:
 
