@@ -94,3 +94,56 @@ if __name__ == '__main__':
     recursive_preorder_traversal(root)
     # recursive_inorder_traversal(root)
     # recursive_postorder_traversal(root)
+   
+"""宝宝写的
+    class Tree:
+    def __init__(self,key):
+        self.left = None
+        self.right = None
+        self.father = None
+        self.key = key
+
+def recursive_preorder(tree):
+    if tree!=None:
+        print(tree.key)
+
+        if tree.left!=None:
+            recursive_preorder(tree.left)
+
+        if tree.right!=None:
+            recursive_preorder(tree.right)
+
+def recursive_midorder(tree):
+    if tree!=None:
+        if tree.left!=None:
+            recursive_midorder(tree.left)
+        print(tree.key)
+        if tree.right!=None:
+            recursive_midorder(tree.right)
+
+def recursive_postorder(tree):
+    if tree!=None:
+        if tree.left!=None:
+            recursive_postorder(tree.left)
+        if tree.right!=None:
+            recursive_postorder(tree.right)
+        print(tree.key)
+
+if __name__ == '__main__':
+    tree = Tree(0)
+    tree1 = Tree(1)
+    tree2 = Tree(2)
+    tree3 = Tree(3)
+    tree4 = Tree(4)
+    tree5 = Tree(5)
+    tree6 = Tree(6)
+    tree.left = tree1
+    tree.right = tree2
+    tree1.left = tree3
+    tree1.right = tree4
+    tree2.left = tree5
+    tree2.right = tree6
+    # recursive_preorder(tree)
+    # recursive_midorder(tree)
+    recursive_postorder(tree)
+"""    
